@@ -998,7 +998,11 @@ resource "aws_elastic_beanstalk_environment" "default" {
     name      = "Protocol"
     value     = "HTTP"
   }
-
+  setting {
+    namespace = "aws:elasticbeanstalk:environment:process:default"
+    name      = "100,200,201,301,400,401,404,429"
+    value     = "HTTP"
+  }
   ###===================== Notification =====================================================###
 
   setting {
