@@ -1000,8 +1000,8 @@ resource "aws_elastic_beanstalk_environment" "default" {
   }
   setting {
     namespace = "aws:elasticbeanstalk:environment:process:default"
-    name      = "100,200,201,301,400,401,404,429"
-    value     = "HTTP"
+    name      = "MatcherHTTPCode"
+    value     = "${var.matcher_http_codes}
   }
   ###===================== Notification =====================================================###
 
