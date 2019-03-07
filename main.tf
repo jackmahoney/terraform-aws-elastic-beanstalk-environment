@@ -1001,7 +1001,7 @@ resource "aws_elastic_beanstalk_environment" "default" {
   setting {
     namespace = "aws:elasticbeanstalk:environment:process:default"
     name      = "MatcherHTTPCode"
-    value     = "${var.matcher_http_codes}
+    value     = "${var.matcher_http_codes}"
   }
   ###===================== Notification =====================================================###
 
