@@ -40,6 +40,11 @@ variable "enhanced_reporting_enabled" {
   description = "Whether to enable \"enhanced\" health reporting for this environment.  If false, \"basic\" reporting is used.  When you set this to false, you must also set `enable_managed_actions` to false"
 }
 
+variable "matcher_http_codes" {
+  default = "200"
+  description = "Comma separated list of http codes that indicate health of instance"
+}
+
 variable "health_streaming_enabled" {
   default     = false
   description = "For environments with enhanced health reporting enabled, whether to create a group in CloudWatch Logs for environment health and archive Elastic Beanstalk environment health data. For information about enabling enhanced health, see aws:elasticbeanstalk:healthreporting:system."
